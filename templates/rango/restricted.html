@@ -1,0 +1,16 @@
+{% extends "rango/base.html" %}
+{% load static %}
+
+{% block title %}Restricted{% endblock %}
+  
+{% block body_block %}
+        <div>This is a restricted page<div>
+        
+        
+        
+        <div>
+
+            <img src="{{ MEDIA_URL}}no.gif"  
+                 alt="this is the restricted image" /> <!-- New line -->
+        </div>
+{% endblock %}
