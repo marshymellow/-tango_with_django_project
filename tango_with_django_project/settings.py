@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 	'rango',
 ]
 LOGIN_URL = '/rango/login/'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
