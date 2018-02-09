@@ -8,23 +8,14 @@
         <h1>Rango says...</h1>
         
         <div>
-            hey there partner!
+            {% if user.is_authenticated %}
+                howdy {{ user.username }}!
+            {% else %}
+                hey there partner!
+            {% endif %}
         </div>
         
-        <div>
-        {% if categories %}
-        <ul>
-            {% for category in categories %}
-            <!-- Following line changed to add an HTML hyperlink -->
-            <li>
-            <a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% else %}
-            <strong>There are no categories present.</strong>
-        {% endif %}
-        </div>
+        
 		<h3>Most Viewed Pages</h3>
         <div>
             {% if pages %}
